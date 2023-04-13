@@ -5,7 +5,7 @@ public class Deposito{
     // ArrayList<ProdutoNaoDuravel> PnDs;
     Produto pCaro;                    // Produto Mais caro 
     ArrayList<Produto> produtos;
-}
+
 
 public Deposito(){
     // PDs = new ArrayList<ProdutoDuravel>();
@@ -66,4 +66,18 @@ public void getPcaro(){
     System.out.println("Preco: " + pCaro.getPreco());
     System.out.println("Marca: " + pCaro.getMarca());
     System.out.println("Descricao: "+ pCaro.getDescricao());
+}
+
+public void list(){
+    for(Produto p : produtos){
+        System.out.println("Nome: " + p.getNome());
+        System.out.println("Preco: " + p.getPreco());
+        System.out.println("Marca: " + p.getMarca());
+        System.out.println("Descricao: "+ p.getDescricao());
+    }
+    System.out.println();
+    System.out.println("Produto Mais Caro:");
+    System.out.println();
+    this.getPcaro();
+}
 }
