@@ -17,10 +17,11 @@ public Deposito(){
 public void addProduto(Produto p){
     produtos.add(p);
     if(pCaro.getPreco() < p.getPreco()){
-        pCaro = new Produto(p.getNome()
-                           ,p.getPreco()
-                           ,p.getMarca()
-                           ,p.getDescricao());
+        pCaro = new Produto();
+        pCaro.setNome(p.getNome());
+        pCaro.setPreco(p.getPreco());
+        pCaro.setMarca(p.getMarca());
+        pCaro.setDescricao(p.getDescricao());
     }
 }
 
@@ -52,7 +53,7 @@ public void removeProduto(String nome){
 //     }
 // }
 
-public void getTamanho(){return produtos.size();}
+public int getTamanho(){return produtos.size();}
 
 public void isVazio(){
     if(produtos.isEmpty()){

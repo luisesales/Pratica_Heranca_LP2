@@ -3,12 +3,7 @@ public class ProdutoNaoDuravel extends Produto{
     private Date dataValidade;
     private String genero;
 
-    public void setDataValidade(Date data){
-        if(data > LocalDateTime.now()){
-            dataValidade = data;
-        }
-        else System.out.println("Insira uma Data Válida!");
-    }
+    public void setDataValidade(Date data){dataValidade = data;}
     public Date getDataValidade(){return dataValidade;}
 
     public void setGenero(String g){genero = g;}

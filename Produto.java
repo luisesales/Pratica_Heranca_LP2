@@ -4,12 +4,12 @@ public class Produto{
     private String marca;
     private String descricao;
 
-    public Produto(String n, double p, String m, String d){
-        this.setNome(n);
-        this.setPreco(p);
-        this.setMarca(m);
-        this.setDescricao(d);
-    }
+    // public Produto(String n, double p, String m, String d){
+    //     this.setNome(n);
+    //     this.setPreco(p);
+    //     this.setMarca(m);
+    //     this.setDescricao(d);
+    // }
 
     public void setNome(String n){nome = n;}
     public String getNome(){return nome;}

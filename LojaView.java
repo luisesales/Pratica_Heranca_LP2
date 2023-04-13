@@ -8,10 +8,9 @@ public class LojaView{
         ProdutoDuravel carro,livro,celular;
         ProdutoNaoDuravel chocolate,toalha,sabonete;
         Deposito dep = new Deposito();
-        String data = "00-00-0000";
         Date dt = new Date();
 		SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-		dt = formato.parse(data);
+		
 
         
         carro = new ProdutoDuravel();
@@ -44,7 +43,7 @@ public class LojaView{
         chocolate.setMarca("Diamante Negro");
         chocolate.setDescricao("Chocolate feito ao leite");
         chocolate.setGenero("Alimentício");
-        dt = new Date(2024,01,01);
+        dt = formato.parse("01-01-2024");
         chocolate.setDataValidade(dt);
         dep.addProduto(chocolate);
 
@@ -54,8 +53,10 @@ public class LojaView{
         toalha.setMarca("Phillips");
         toalha.setDescricao("Toalha incrível que se seca sozinha");
         toalha.setGenero("Higiene Pessoal");
-        dt = new Date(2024,01,01);
+        dt = formato.parse("01-01-2024");
         toalha.setDataValidade(dt);
         dep.addProduto(toalha);
+
+        dep.list();
     }
 }
